@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Faculty | Admin</title>
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body class="page">
+    <section class="sidebar">
+        <div class="sidebar__item sidebar__logo">
+            <img src="../../images/backgrounds/background__admin.jpg" alt="" class="sidebar__logo-image sidebar__logo-image--default">
+        </div>
+        <div class="sidebar__item sidebar__title">
+            <h2 class="sidebar__title-text">My Faculty</h2>
+        </div>
+        <nav class="sidebar__item">
+            <ul class="sidebar__menu">
+                <li><a href="../../pages/panel/index.html" class="link sidebar__menu-item sidebar__menu-item--link">Dashboard</a></li>
+                <li><a href="../../pages/panel/departments.html" class="link sidebar__menu-item sidebar__menu-item--link">Departments</a></li>
+                <li><a href="../../pages/panel/settings.html" class="link sidebar__menu-item sidebar__menu-item--link">Settings</a></li>
+                <li><a href="../../pages/auth/auth.html" class="link sidebar__menu-item sidebar__menu-item--exit">Exit</a></li>
+            </ul>
+        </nav>
+        <footer class="sidebar__item sidebar__item--footer">
+            <span>CFU &copy; 2019</span>
+        </footer>
+    </section>
+    <section class="page__inner">
+        <div class="page__title">
+            <h1 class="page__title-text page__title-text--large">Departments</h1>
+        </div>
+        <div class="page__content">
+            <div class="page__table">
+                <div class="page__table-item--header">
+                    <div class="page__table-item page__table--number">
+                        <p class="page__table--title">№</p>
+                    </div>
+                    <div class="page__table-item page__table--name">
+                        <p class="page__table--title">Title</p>
+                    </div>
+                    <div class="page__table-item page__table--status">
+                        <p class="page__table--title page__table--title-status">Is Active?</p>
+                    </div>
+                    <div class="page__table-item page__table--buttons">
+                        <p class="page__table--title">Action</p>
+                    </div>
+                </div>
+                <div class="page__table-item--block">
+                    <div class="page__table-item page__table--number">
+                        <p class="page__table--title page__table--title-number">0</p>
+                    </div>
+                    <div class="page__table-item page__table--name">
+                        <a href="#" class="link page__table--title page__table--title-name">Page</a>
+                    </div>
+                    <div class="page__table-item page__table--status">
+                        <select name="" id="">
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+                    </div>
+                    <div class="page__table-item page__table--buttons">
+                        <ul class="page__table--title page__list page__list--blocks">
+                            <li class="page__table-item page__table-item--mx10">
+                                <a href="#" class="link link--box link--blue">
+                                    <img src="../../images/png/pencil.png" alt="edit" class="page__icon page__icon--small">
+                                </a>
+                            </li>
+                            <li class="page__table-item page__table-item--mx10">
+                                <a href="#" class="link link--box link--red">
+                                    <img src="../../images/png/delete.png" alt="delete" class="page__icon page__icon--small">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
