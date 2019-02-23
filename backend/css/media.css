@@ -1,0 +1,5 @@
+@media only handheld{
+    .sidebar__logo{
+        visibility: hidden;
+    }  
+}

@@ -1,4 +1,13 @@
 .page {
+  display: inline-flex;
+  /* display: -webkit-inline-flex;*/
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.body__adaptive{
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
@@ -6,7 +15,8 @@
   height: 100vh;
 }
 .page__inner {
-  display: inline-block;
+  display: inline-table;/*changed this*/
+  position: relative; /*this*/
   vertical-align: top;
   padding: 30px 50px;
   width: calc(100% - 26%);
@@ -99,9 +109,14 @@
   min-height: 25px;
   max-height: 25px;
 }
+.page__table{
+  white-space:nowrap;
+  display: flexbox;
+}
 .page__table--title {
   padding: 10px;
   margin: 0;
+  display: inline-block;
 }
 .page__table--number {
   max-width: 50px;
@@ -124,8 +139,13 @@
   margin: 10px;
 }
 .page__table-item--header {
+  white-space: nowrap;
   background-color: #1e90ff;
   font-weight: 900;
+}
+.page__table-item--list{
+  display: inline-flex;
+  list-style: none;
 }
 .page__form-item {
   margin: 13px auto;
@@ -172,10 +192,10 @@
   text-decoration: none;
 }
 .sidebar {
-  display: inline-block;
+  display: inline-table;
   background-color: #121212;
   height: 100%;
-  position: relative;
+  position: relative; /*this*/
   min-width: 300px;
 }
 .sidebar__item--footer {
@@ -197,7 +217,7 @@
   padding: 0px;
   margin: 0;
 }
-.sidebar__menu-item {
+.sidebar__menu-item, .topbar__menu-item{
   padding: 17px 20px;
   display: block;
   font-size: 18px;
@@ -206,17 +226,17 @@
   overflow: hidden;
   transition: .3s ease;
 }
-.sidebar__menu-item--link {
+.sidebar__menu-item--link, .topbar__menu-item--link {
   color: #fff;
 }
-.sidebar__menu-item--link:hover {
+.sidebar__menu-item--link:hover, .topbar__menu-item--link:hover {
   color: #1e90ff;
   background-color: #fff;
 }
-.sidebar__menu-item--exit {
+.sidebar__menu-item--exit, .topbar__menu-item--exit {
   color: #de0000;
 }
-.sidebar__menu-item--exit:hover {
+.sidebar__menu-item--exit:hover, .topbar__menu-item--exit:hover{
   color: #fff;
   background-color: #de0000;
 }
@@ -226,10 +246,45 @@
 .sidebar__logo-image {
   width: auto;
   max-height: 250px;
+  max-width: 300px; /*added this*/
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
   overflow: hidden;
   vertical-align: middle;
+}
+
+.topbar{
+  width: max-content;
+  margin-top:0px;
+  vertical-align: top;
+  text-align: center;
+  background-color: #121212;
+}
+.topbar__menu {
+  display: inline-flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+
+.topbar__title {
+  color: #1e90ff;
+  text-align: center;
+  padding-top: 15px;
+}
+.topbar__title-text{
+  margin-top:0px;
+}
+
+.page__table_adapt{
+  width: fit-content;
+  position: fixed;
+  white-space: nowrap;
+  display: inline-block;
+}
+.body__content--footer{
+  vertical-align: bottom;
+  text-align: center;
 }
