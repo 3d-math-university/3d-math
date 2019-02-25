@@ -1,4 +1,4 @@
-package com.math3;
+package com.math3d;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "math3";
+        return "math3d";
     }
     @Override
     protected ReactActivityDelegate createReactActivityDelegate() {
