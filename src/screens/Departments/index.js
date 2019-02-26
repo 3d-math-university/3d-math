@@ -1,15 +1,48 @@
 import React from 'react';
-import {View, Text, Button } from 'react-native';
+import {View} from 'react-native';
+import { ImageButton } from '../../components';
 import styles from '../../style';
-
 export class DepartmentsScreen extends React.Component {
     render() {
       return (
-        <View style={styles.container}>
-          <Text>DepartmentsScreen</Text>
-          <Button
-            title="Go back"
-            onPress={() => this.props.navigation.goBack()}
+        
+        //pictures provided via api
+        <View style={{display: 'flex', flexDirection: 'row',  flexWrap: 'wrap'}}>
+          <ImageButton
+            style={styles.imageButtonStyle}
+            /*width={'50%'} */        
+            height={'100%'}
+            source={require('../../../media/img/aud1.jpg')}        
+            onPress={() => this.props.navigation.navigate('Departments')}
+         />
+          <ImageButton
+            style={styles.imageButtonStyle}
+          /*  width={'50%'}   */     
+          height={'100%'}
+            source={require('../../../media/img/aud2.jpg')}
+            onPress={() => this.props.navigation.navigate('Departments')}
+          />
+          <ImageButton
+            style={styles.imageButtonStyle}
+           /* width={'50%'}    */      
+         height={'100%'}
+            source={require('../../../media/img/aud3.jpg')}
+            onPress={() => this.props.navigation.navigate('Departments')}
+          />
+          <ImageButton
+            style={styles.imageButtonStyle}
+           /* width={'50%'}  */        
+           height={'100%'}
+            source={require('../../../media/img/aud4.jpg')}
+            onPress={() => this.props.navigation.navigate('Departments')}
+          />
+          <ImageButton
+            style={styles.imageButtonStyle}
+           /* width={'50%'}     */     
+          height={'100%'}
+            source={require('../../../media/img/aud1.jpg')}
+            onPress={() => this.props.navigation.navigate('Departments')}
+          
           />
         </View>
       );

@@ -1,31 +1,34 @@
 import React from 'react';
-import {View, Text, Button } from 'react-native';
+import {View, Text, Image } from 'react-native';
 import styles from '../../style';
+import { MainMenuButton } from '../../components';
+
 
 export class HomeScreen extends React.Component {
     render() {
       return (
         <View style={styles.container}>
+         <Image
+          style={{height: 125, width: 152}}
+          source={require('../../../media/img/logo.png')}
+        />
           <Text>МАТФАК 3D</Text>
           
-          <View style={styles.button}>
-            <Button
+          <View style={styles.buttons}>
+            <MainMenuButton
              title="Кафедры"
               onPress={() => this.props.navigation.navigate('Departments')}
            />
-          </View>
-          <View style={styles.button}>
-            <Button
+
+            <MainMenuButton
             title="Абитуриенту"
             onPress={() => this.props.navigation.navigate('Enrolee')}
-            /></View>
-            <View style={styles.button}>
-              <Button
+            />
+              <MainMenuButton
             title="Виртуальный тур"
             onPress={() => this.props.navigation.navigate('Virt')}
-            /></View>
-            <View style={styles.button}>
-              <Button
+            />
+              <MainMenuButton
             title="О нас"
             onPress={() => this.props.navigation.navigate('AboutUs')}
           />

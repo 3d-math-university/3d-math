@@ -3,17 +3,22 @@ import { createAppContainer, createStackNavigator, } from 'react-navigation'; //
 import * as Screens from './screens';
 
 
-
-
 const RootStack = createStackNavigator({
   Home: {
     screen: Screens.HomeScreen,
+    navigationOptions: () => ({
+      header: null
+    }),
   },
   Departments: {
     screen: Screens.DepartmentsScreen,
+    navigationOptions: () => ({
+      title: `Кафедры`
+    }),
   },
   Enrolee: {
     screen: Screens.EnroleeScreen,
+    
   },
   Virt: {
     screen: Screens.VirtScreen,
@@ -24,6 +29,7 @@ const RootStack = createStackNavigator({
 }, {
     initialRouteName: 'Home',
 });
+
 
 const AppContainer = createAppContainer(RootStack);
 export default class App extends React.Component {
