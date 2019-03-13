@@ -19,17 +19,18 @@ export default StyleSheet.create({
     },
     InfoPageView:{             
       color: '#111',
+      //flex: 1,  
+      flexGrow: 0,
       //height: ',     
    //   padding: 10*PixelRatio.get(),
    
     },
     InfoPageContainer:{             
-    //  flex: 1,
-      width: '100%',
-      //height: '100%',      
-      color: '#111',   
+    //  
+      width: '100%',   
+      color: '#111',  
     },
-    StoryHeader:{
+    StoryHeaderImage:{
       width: '100%',      
       height: 75*PixelRatio.get(),
       flex: 1,
@@ -48,9 +49,9 @@ export default StyleSheet.create({
       padding: 7*PixelRatio.get(),
       fontSize: 14,
     },
-    StoryHeaderImage:{
+    InfoPageImage:{
       width: '100%',
-      maxHeight:100*PixelRatio.get(),
+      maxHeight: 100*PixelRatio.get(),
     },
     logo:{
       marginBottom: 10,
@@ -64,10 +65,28 @@ export default StyleSheet.create({
       fontWeight: 'bold',
       marginTop: 10,
     },    
+    imageButtonDepart: {
+      width: '50%',
+      height: 60*PixelRatio.get(),  
+    },    
+    imageButtonDepartTitle:{       
+      textAlign: 'right',
+      marginTop:40*PixelRatio.get(),
+      marginRight: 3*PixelRatio.get(),
+      color: "#fff",             
+      fontSize: 12,
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+      textShadowOffset: {width: -1, height: 1},
+      textShadowRadius: 10,
+    },
+
+
     imageButtonStyle: {
       width: '50%',
-      height: 75*PixelRatio.get(),
-    },
+      height: 60*PixelRatio.get(),
+    },    
+    imageButtonTitle:{},
+
     containerStyle: {
       alignItems: 'center',
       borderRadius: 5,
