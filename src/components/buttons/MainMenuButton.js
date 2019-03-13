@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
+import styles from '../../style';
 
 /*import fonts from '../../fonts';*/
 
 const MainMenuButton = ({ style, backgroundColor, textColor, title, enable = true, onPress }) => {
   const {
     containerStyle,
-    textStyle
+    MainMenuTextStyle,
   } = styles;
 
   return (
@@ -18,26 +19,12 @@ const MainMenuButton = ({ style, backgroundColor, textColor, title, enable = tru
         disabled={!enable}
         onPress={onPress}
     >
-      <Text style={[{ color: textColor }, textStyle]}>
+      <Text style={[{ color: textColor }, MainMenuTextStyle]}>
         {title}
       </Text>
     </TouchableOpacity>
   );
 };
 
-
-const styles = StyleSheet.create({
-  containerStyle: {
-    alignItems: 'center',
-    borderRadius: 5,
-    margin: 5,
-    height: 30
-  },
-  textStyle: {
-    /*fontFamily: fonts.regular,*/
-    fontSize: 16,
-    margin: 10
-  }
-});
 
 export { MainMenuButton };

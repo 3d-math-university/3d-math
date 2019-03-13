@@ -1,6 +1,6 @@
 import React from 'react';
 import { createAppContainer, createStackNavigator, } from 'react-navigation'; // Version can be specified in package.json
-import * as Screens from './screens';
+import * as Screens from './screens/index';
 
 
 const RootStack = createStackNavigator({
@@ -11,23 +11,30 @@ const RootStack = createStackNavigator({
     }),
   },
   Departments: {
-    screen: Screens.DepartmentsScreen,
+    screen: Screens.DepartmentsScreen, 
     navigationOptions: () => ({
-      title: `Кафедры`
+      headerTransparent: false,
+      title: `Кафедры`,     
     }),
+      
   },
   Enrolee: {
     screen: Screens.EnroleeScreen,
-    
   },
   Virt: {
     screen: Screens.VirtScreen,
   },
   AboutUs: {
-    screen: Screens.AboutUsScreen,
+    screen: Screens.AboutUsScreen,  
+    navigationOptions:()=>({
+      headerTintColor: '#fff',
+    }),
   },
 }, {
-    initialRouteName: 'Home',
+    initialRouteName: 'Home',   
+    defaultNavigationOptions:{
+      headerTransparent: true,
+    }
 });
 
 

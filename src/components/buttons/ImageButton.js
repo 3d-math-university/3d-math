@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
+import styles from '../../style';
 
 
 const ImageButton = ({ style, width, height, source, onPress }) => {
@@ -14,14 +15,5 @@ const ImageButton = ({ style, width, height, source, onPress }) => {
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  containerStyle: {
-
-  },
-  imageStyle: {
-    margin: 0
-  }
-});
 
 export { ImageButton };
