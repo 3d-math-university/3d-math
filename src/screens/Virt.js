@@ -1,18 +1,24 @@
-import React from 'react';
-import { Button, Text, View } from 'react-native';
-import styles from '../style';
+//import Expo from "expo";
+import React from "react";
+import {View} from "react-native";
+import * as THREE from "three";
+//import ExpoTHREE from "expo-three";
 
 export class VirtScreen extends React.Component {
     render() {
       return (
-        <View style={styles.container}>
-          <Text>VirtScreen</Text>
-          <Button
-            title="Go back"
-            onPress={() => this.props.navigation.goBack()}
-          />
-        </View>
+      <View></View>
       );
     }  
   }
-  
+/*_onGLContextCreate = async (gl) => {
+    // Here is where we will define our scene, camera and renderer
+    // 1. Scene
+  var scene = new THREE.Scene(); 
+// 2. Camera
+  const camera = new THREE.PerspectiveCamera(
+  75, gl.drawingBufferWidth / gl.drawingBufferHeight, 0.1, 1000);
+// 3. Renderer
+  const renderer = ExpoTHREE.createRenderer({ gl });
+  renderer.setSize(gl.drawingBufferWidth, gl.drawingBufferHeight);
+}*/
