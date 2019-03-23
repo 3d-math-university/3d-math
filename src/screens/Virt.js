@@ -1,9 +1,5 @@
-//import Expo from "expo";
 import React from "react";
 import {View} from "react-native";
-import * as THREE from "three";
-//import ExpoTHREE from "expo-three";
-
 export class VirtScreen extends React.Component {
     render() {
       return (
