@@ -35,7 +35,7 @@ export class HomeScreen extends React.Component {
               />
             </View>
           </View>
-          <Text style={styles.homePageFooter}>CFU Labs &copy; 2019</Text>
+          <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
         </ImageBackground>
       );
     }

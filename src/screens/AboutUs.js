@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground,Image, Text, View,ScrollView, Dimensions } from 'react-native';
+import { ImageBackground,Image, Text, View, ScrollView, Dimensions } from 'react-native';
 import styles from '../style';
 export class AboutUsScreen extends React.Component {
     render() {
@@ -8,7 +8,7 @@ export class AboutUsScreen extends React.Component {
 
           <ImageBackground source={require ('../../media/img/AboutUs/header.png')}
               style={styles.StoryHeaderImage}>
-              <Text style={styles.StoryHeaderText}>Sample Sample</Text>          
+              <Text style={styles.StoryHeaderText}>О нас</Text>
             </ImageBackground>
             <View style={styles.InfoPageContainer}>
               <Text style={styles.InfoPageText}>Внезапно, сделанные на базе интернет-аналитики выводы ассоциативно распределены по отраслям. Безусловно, внедрение современных методик требует анализа благоприятных перспектив.</Text>
@@ -28,6 +28,7 @@ export class AboutUsScreen extends React.Component {
                 <Image source={require ('../../media/img/AboutUs/4.jpg')} style={{height:'100%', width:'100%'}}/>
               </View>
             </View>
+                      <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
           </ScrollView>
       );
     }
