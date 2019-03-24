@@ -4,22 +4,29 @@ import styles from '../../style';
 
 /*import fonts from '../../fonts';*/
 
-const MainMenuButton = ({ style, backgroundColor, textColor, title, enable = true, onPress }) => {
-  const {
-    containerStyle,
-    MainMenuTextStyle,
-  } = styles;
+const MainMenuButton = (
+    {   style,
+        backgroundColor,
+        textColor,
+        title,
+        enable = true,
+        onPress }) => {
+          const {
+              containerStyle,
+              homePageLink
+          } = styles;
 
   return (
     <TouchableOpacity
-        style={[{
-          opacity: enable ? 1 : 0.5,
-          backgroundColor
+        style = {[{
+            opacity: enable ? 1 : 0.25, 
+            backgroundColor
         }, containerStyle, style]}
-        disabled={!enable}
-        onPress={onPress}
+
+        disabled = { !enable }
+        onPress = { onPress }
     >
-      <Text style={[{ color: textColor }, MainMenuTextStyle]}>
+      <Text style={[{ color: textColor }, homePageLink]}>
         {title}
       </Text>
     </TouchableOpacity>

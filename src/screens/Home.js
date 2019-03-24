@@ -8,15 +8,15 @@ export class HomeScreen extends React.Component {
     render() {
       return (
         <ImageBackground source={require('../../media/img/background.jpg')} style={{width: '100%', height: '100%'}}>
-          <View style={styles.HomeContainer}>
+          <View style={styles.homeContainer}>
           <View style={styles.logo}>
             <Image
               style={{height: 125, width: 152}}
               source={require('../../media/img/logo.png')}
             />
             </View>
-            <Text style={styles.h1}>МАТФАК 3D</Text>
-            <View style={styles.mainMenu}>
+            <Text style={styles.homePageHeader}>3D МАТФАК</Text>
+            <View style={styles.homePageMainMenu}>
               <MainMenuButton
                 title="Кафедры"
                 onPress={() => this.props.navigation.navigate('Departments')}
@@ -35,7 +35,8 @@ export class HomeScreen extends React.Component {
               />
             </View>
           </View>
+          <Text style={styles.homePageFooter}>CFU Labs &copy; 2019</Text>
         </ImageBackground>
       );
-    }  
+    }
   }
