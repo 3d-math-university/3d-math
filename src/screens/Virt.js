@@ -287,23 +287,23 @@ class VirtScreen extends React.Component {
     }`
     this.info = JSON.parse(this.info);
     this.files = {
-      "2018_1204_140215_048.jpg": require('./2018_1204_140215_048.jpg'),      
-      "2018_1206_104942_019.jpg": require('./2018_1206_104942_019.jpg'),                     
-      "2018_1206_103734_002.jpg": require('./2018_1206_103734_002.jpg'), 
-      "2018_1206_103843_003.jpg": require('./2018_1206_103843_003.jpg'),
-      "2018_1206_103929_005.jpg": require('./2018_1206_103929_005.jpg'), 
-      "2018_1206_104013_007.jpg": require('./2018_1206_104013_007.jpg'),
-      "geometry.jpg": require('./geometry.jpg'), 
-      "2018_1206_104209_003.jpg": require('./2018_1206_104209_003.jpg'),
-      "2018_1206_104332_004.jpg": require('./2018_1206_104332_004.jpg'),
-      "2018_1206_104420_006.jpg": require('./2018_1206_104420_006.jpg'),
-      "matan.jpg": require('./matan.jpg'),
-      "2018_1206_104545_008.jpg": require('./2018_1206_104545_008.jpg'),
-      "2018_1206_104620_010.jpg": require('./2018_1206_104620_010.jpg'),
-      "2018_1206_104733_014.jpg": require('./2018_1206_104733_014.jpg'),
-      "primat.jpg": require('./primat.jpg'),
-      "2018_1206_104832_018.jpg": require('./2018_1206_104832_018.jpg'),
-      "it.jpg": require('./it.jpg'),
+      "2018_1204_140215_048.jpg": require('../../media/VT/2018_1204_140215_048.jpg'),      
+      "2018_1206_104942_019.jpg": require('../../media/VT/2018_1206_104942_019.jpg'),                     
+      "2018_1206_103734_002.jpg": require('../../media/VT/2018_1206_103734_002.jpg'), 
+      "2018_1206_103843_003.jpg": require('../../media/VT/2018_1206_103843_003.jpg'),
+      "2018_1206_103929_005.jpg": require('../../media/VT/2018_1206_103929_005.jpg'), 
+      "2018_1206_104013_007.jpg": require('../../media/VT/2018_1206_104013_007.jpg'),
+      "geometry.jpg": require('../../media/VT/geometry.jpg'), 
+      "2018_1206_104209_003.jpg": require('../../media/VT/2018_1206_104209_003.jpg'),
+      "2018_1206_104332_004.jpg": require('../../media/VT/2018_1206_104332_004.jpg'),
+      "2018_1206_104420_006.jpg": require('../../media/VT/2018_1206_104420_006.jpg'),
+      "matan.jpg": require('../../media/VT/matan.jpg'),
+      "2018_1206_104545_008.jpg": require('../../media/VT/2018_1206_104545_008.jpg'),
+      "2018_1206_104620_010.jpg": require('../../media/VT/2018_1206_104620_010.jpg'),
+      "2018_1206_104733_014.jpg": require('../../media/VT/2018_1206_104733_014.jpg'),
+      "primat.jpg": require('../../media/VT/primat.jpg'),
+      "2018_1206_104832_018.jpg": require('../../media/VT/2018_1206_104832_018.jpg'),
+      "it.jpg": require('../../media/VT/it.jpg'),
     }
     this.width = Dimensions.get('window').width;
     this.height = Dimensions.get('window').height;
@@ -427,9 +427,7 @@ class VirtScreen extends React.Component {
     };
     this.showPanorama(this.nextPhoto);    
     this.render();
-
   }; 
 }
-
 
 export {VirtScreen};
