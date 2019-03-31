@@ -1,7 +1,7 @@
 import { GLView } from 'expo';
 import React from "react";
 import ExpoTHREE, { THREE } from "expo-three";
-import { PixelRatio, TouchableWithoutFeedback,Dimensions} from 'react-native';
+import { PixelRatio, TouchableWithoutFeedback,Dimensions, Alert} from 'react-native';
 import { Switch } from 'react-native-gesture-handler';
 //import * as THREE from 'three'
 class VirtScreen extends React.Component {
@@ -325,6 +325,7 @@ class VirtScreen extends React.Component {
       this.raycaster.setFromCamera( this.mouseVector, this.camera );
       return this.raycaster.intersectObject( this.group, true );
     }
+    this.onObject = false;
   }
   componentDidMount() {
     THREE.suppressExpoWarnings(); 
@@ -335,23 +336,63 @@ class VirtScreen extends React.Component {
   }
   render() {
     return (
-      <TouchableWithoutFeedback      
-        style={{ flex: 1 }}
-        onPress={(event) => {
-          event.preventDefault();       
-          var intersects = this.getIntersects( event.layerX, event.layerY );
-          if ( intersects.length > 0 ) {
-            this.nextPhoto = intersects[0].object.next;
-            //this.longitude = intersects[0].object.longitude;
-            this.showPanorama(this.nextPhoto);            
-          }        
+           <GLView
+        style={{ flex: 1, backgroundColor:"#fff" }}
+        onContextCreate={this.onContextCreate} 
+        onStartShouldSetResponder={()=>true}
+        onResponderStart={(event)=>{
+
+          this.manualControl = false;
+          this.savedX = event.nativeEvent.pageX;
+          this.savedY = event.nativeEvent.pageY;
+  
+          this.savedLongitude = this.longitude;
+          this.savedLatitude = this.latitude;		
+
+          var intersects = this.getIntersects( event.nativeEvent.pageX, event.nativeEvent.pageY );
+				  if ( intersects.length > 0 && intersects.length != 'undefined') {
+            this.onObject = true;
+				  } 
+          //Alert.alert((this.onObject)?"1":"0");
         }}
-      >
-      <GLView
-          style={{ flex: 1, backgroundColor:"#fff" }}
-          onContextCreate={this.onContextCreate}
-      ></GLView>  
-     </TouchableWithoutFeedback> 
+        onResponderMove={(event)=>{
+          const {touchBank,numberActiveTouches} = event.touchHistory;
+          if(numberActiveTouches===1){
+            let xChange=0;
+            let yChange=0;
+          if(touchBank[0]){
+              xChange=touchBank[0].currentPageX-touchBank[0].previousPageX;
+              yChange=touchBank[0].currentPageY-touchBank[0].previousPageY;
+          }else{
+            xChange=touchBank[1].currentPageX-touchBank[1].previousPageX;
+            yChange=touchBank[1].currentPageY-touchBank[1].previousPageY;
+          }
+          this.longitude += xChange/2;
+          this.latitude += yChange/2;
+          this.manualControl = true;
+          }		         
+        }}
+        onResponderRelease={(event)=>{
+          //const {touchBank} = event.touchHistory;
+          //Alert.alert((this.onObject)?"1":"0");
+          if(this.manualControl == false){
+            if(this.onObject == true){
+              this.manualControl = false;
+              var intersects = this.getIntersects( event.nativeEvent.currentPageX, event.nativeEvent.currentPageY );
+              if ( intersects.length > 0 ) {  
+                this.nextPhoto = intersects[0].object.next;
+                this.showPanorama(this.nextPhoto);                
+                this.longitude = intersects[0].object.longitude;
+              }                    
+            }
+          }
+          
+          this.onObject = false;          
+          this.manualControl = false;
+          this.prevDiff = undefined;
+        }}         
+      />  
+   
     );
   }
  
@@ -408,7 +449,7 @@ class VirtScreen extends React.Component {
       for(var i in arrows){
         if(this.info[nextPhoto]["points"][i].coords.length == 3){
           // var spriteMap = new THREE.TextureLoader().load( './arrow.png' ); 
-          var spriteMap = await ExpoTHREE.loadAsync( require('./arrow.png' ));      
+          var spriteMap = await ExpoTHREE.loadAsync( require('../../media/VT/arrow.png' ));      
           var sprite = new THREE.Sprite( new THREE.SpriteMaterial( { map: spriteMap} ) );
           sprite.position.set(...this.info[nextPhoto]["points"][i].coords);
           sprite.scale.set( 8, 8, 8 );
@@ -421,11 +462,13 @@ class VirtScreen extends React.Component {
     this.render = () => {
       requestAnimationFrame(this.render);
       this.latitude = Math.max(-85, Math.min(85, this.latitude));
+      // if (this.onObject === false) this.cameraPoint(this.longitude);       
+      this.renderer.render(this.scene, this.camera);      
       this.cameraPoint(this.longitude);
-      this.renderer.render(this.scene, this.camera);
       gl.endFrameEXP();
     };
-    this.showPanorama(this.nextPhoto);    
+    this.showPanorama(this.nextPhoto);             
+    this.cameraPoint(this.longitude);
     this.render();
   }; 
 }

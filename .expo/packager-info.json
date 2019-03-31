@@ -1,9 +1,9 @@
 {
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "packagerPort": 19001,
+  "packagerPid": 19316,
+  "expoServerNgrokUrl": "https://a8-bah.anonymous.1.exp.direct",
+  "packagerNgrokUrl": "https://packager.a8-bah.anonymous.1.exp.direct",
+  "ngrokPid": 10976,
   "devToolsPort": 19002,
-  "expoServerPort": null
+  "expoServerPort": 19000
 }
