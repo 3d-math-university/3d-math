@@ -287,23 +287,23 @@ class VirtScreen extends React.Component {
     }`
     this.info = JSON.parse(this.info);
     this.files = {
-      "2018_1204_140215_048.jpg": require('../../media/VT/2018_1204_140215_048.jpg'),      
-      "2018_1206_104942_019.jpg": require('../../media/VT/2018_1206_104942_019.jpg'),                     
-      "2018_1206_103734_002.jpg": require('../../media/VT/2018_1206_103734_002.jpg'), 
-      "2018_1206_103843_003.jpg": require('../../media/VT/2018_1206_103843_003.jpg'),
-      "2018_1206_103929_005.jpg": require('../../media/VT/2018_1206_103929_005.jpg'), 
-      "2018_1206_104013_007.jpg": require('../../media/VT/2018_1206_104013_007.jpg'),
-      "geometry.jpg": require('../../media/VT/geometry.jpg'), 
-      "2018_1206_104209_003.jpg": require('../../media/VT/2018_1206_104209_003.jpg'),
-      "2018_1206_104332_004.jpg": require('../../media/VT/2018_1206_104332_004.jpg'),
-      "2018_1206_104420_006.jpg": require('../../media/VT/2018_1206_104420_006.jpg'),
-      "matan.jpg": require('../../media/VT/matan.jpg'),
-      "2018_1206_104545_008.jpg": require('../../media/VT/2018_1206_104545_008.jpg'),
-      "2018_1206_104620_010.jpg": require('../../media/VT/2018_1206_104620_010.jpg'),
-      "2018_1206_104733_014.jpg": require('../../media/VT/2018_1206_104733_014.jpg'),
-      "primat.jpg": require('../../media/VT/primat.jpg'),
-      "2018_1206_104832_018.jpg": require('../../media/VT/2018_1206_104832_018.jpg'),
-      "it.jpg": require('../../media/VT/it.jpg'),
+      "2018_1204_140215_048.jpg": "http://avladimir.beget.tech/2018_1204_140215_048.jpg",      
+      "2018_1206_104942_019.jpg": "http://avladimir.beget.tech/2018_1206_104942_019.jpg",                     
+      "2018_1206_103734_002.jpg": "http://avladimir.beget.tech/2018_1206_103734_002.jpg", 
+      "2018_1206_103843_003.jpg": "http://avladimir.beget.tech/2018_1206_103843_003.jpg",
+      "2018_1206_103929_005.jpg": "http://avladimir.beget.tech/2018_1206_103929_005.jpg", 
+      "2018_1206_104013_007.jpg": "http://avladimir.beget.tech/2018_1206_104013_007.jpg",
+      "geometry.jpg": "http://avladimir.beget.tech/geometry.jpg", 
+      "2018_1206_104209_003.jpg": "http://avladimir.beget.tech/2018_1206_104209_003.jpg",
+      "2018_1206_104332_004.jpg": "http://avladimir.beget.tech/2018_1206_104332_004.jpg",
+      "2018_1206_104420_006.jpg": "http://avladimir.beget.tech/2018_1206_104420_006.jpg",
+      "matan.jpg": "http://avladimir.beget.tech/matan.jpg",
+      "2018_1206_104545_008.jpg": "http://avladimir.beget.tech/2018_1206_104545_008.jpg",
+      "2018_1206_104620_010.jpg": "http://avladimir.beget.tech/2018_1206_104620_010.jpg",
+      "2018_1206_104733_014.jpg": "http://avladimir.beget.tech/2018_1206_104733_014.jpg",
+      "primat.jpg": "http://avladimir.beget.tech/primat.jpg",
+      "2018_1206_104832_018.jpg": "http://avladimir.beget.tech/2018_1206_104832_018.jpg",
+      "it.jpg": "http://avladimir.beget.tech/it.jpg",
     }
     this.width = Dimensions.get('window').width;
     this.height = Dimensions.get('window').height;
@@ -367,8 +367,8 @@ class VirtScreen extends React.Component {
             xChange=touchBank[1].currentPageX-touchBank[1].previousPageX;
             yChange=touchBank[1].currentPageY-touchBank[1].previousPageY;
           }
-          this.longitude += xChange/2;
-          this.latitude += yChange/2;
+          this.longitude -= xChange/3;
+          this.latitude -= yChange/3;
           this.manualControl = true;
           }		         
         }}
@@ -426,11 +426,7 @@ class VirtScreen extends React.Component {
     this.showPanorama = async (nextPhoto) => {
       // creation of the sphere material
       const texture = await ExpoTHREE.loadAsync(this.files[nextPhoto]);
-      // const texture = await ExpoTHREE.loadAsync(file);      
-      file = null; 
-     // const texture = await ExpoTHREE.loadAsync(toDataURL(path));
-      var sphereMaterial = new THREE.MeshBasicMaterial( { map: texture } );
-    
+      var sphereMaterial = new THREE.MeshBasicMaterial( { map: texture } );    
       // geometry + material = mesh (actual object)
       var sphereMesh = new THREE.Mesh(this.sphere, sphereMaterial);
       this.scene.add(sphereMesh);
@@ -448,8 +444,7 @@ class VirtScreen extends React.Component {
       console.log(arrows)
       for(var i in arrows){
         if(this.info[nextPhoto]["points"][i].coords.length == 3){
-          // var spriteMap = new THREE.TextureLoader().load( './arrow.png' ); 
-          var spriteMap = await ExpoTHREE.loadAsync( require('../../media/VT/arrow.png' ));      
+		  var spriteMap = await ExpoTHREE.loadAsync("http://avladimir.beget.tech/arrow.PNG");      
           var sprite = new THREE.Sprite( new THREE.SpriteMaterial( { map: spriteMap} ) );
           sprite.position.set(...this.info[nextPhoto]["points"][i].coords);
           sprite.scale.set( 8, 8, 8 );
