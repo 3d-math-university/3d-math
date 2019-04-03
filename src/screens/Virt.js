@@ -6,37 +6,39 @@ import { Switch } from 'react-native-gesture-handler';
 //import * as THREE from 'three'
 class VirtScreen extends React.Component {
 
-  constructor(props){
+    constructor (props){
     super(props);
     this.prevX1;
     this.prevX2;
     this.prevDiff;
-    this.info = `{
+    this.info = {
       "2018_1204_140215_048.jpg" : {
         "points":{
+          "0":{
+            "coords":[60, -15, 25],
+            "next": "2018_1206_104942_019.jpg",
+            "longitude": 113.4
+          } ,	      
           "1":{
             "coords":[60, -15, 25],
             "next": "2018_1206_104942_019.jpg",
             "longitude": 113.4
-          }
-          
+          }       		  
         }
       },
 
       "2018_1206_104942_019.jpg" : {
         "points":{
-          "0":{
-            "coords":[-30, -5, 60],
-            "next": "2018_1206_103734_002.jpg",
-            "longitude": 135.1
-          },
-
-          "1":{
+		"0":{
             "coords":[4, -20, 50],
             "next": "2018_1204_140215_048.jpg",
             "longitude": 15.1
-          }
-          
+          },
+          "1":{
+            "coords":[-30, -5, 60],
+            "next": "2018_1206_103734_002.jpg",
+            "longitude": 135.1
+          } 
         }
       },
       
@@ -284,27 +286,8 @@ class VirtScreen extends React.Component {
           }          
         }
       }
-    }`
-    this.info = JSON.parse(this.info);
-    this.files = {
-      "2018_1204_140215_048.jpg": "http://avladimir.beget.tech/2018_1204_140215_048.jpg",      
-      "2018_1206_104942_019.jpg": "http://avladimir.beget.tech/2018_1206_104942_019.jpg",                     
-      "2018_1206_103734_002.jpg": "http://avladimir.beget.tech/2018_1206_103734_002.jpg", 
-      "2018_1206_103843_003.jpg": "http://avladimir.beget.tech/2018_1206_103843_003.jpg",
-      "2018_1206_103929_005.jpg": "http://avladimir.beget.tech/2018_1206_103929_005.jpg", 
-      "2018_1206_104013_007.jpg": "http://avladimir.beget.tech/2018_1206_104013_007.jpg",
-      "geometry.jpg": "http://avladimir.beget.tech/geometry.jpg", 
-      "2018_1206_104209_003.jpg": "http://avladimir.beget.tech/2018_1206_104209_003.jpg",
-      "2018_1206_104332_004.jpg": "http://avladimir.beget.tech/2018_1206_104332_004.jpg",
-      "2018_1206_104420_006.jpg": "http://avladimir.beget.tech/2018_1206_104420_006.jpg",
-      "matan.jpg": "http://avladimir.beget.tech/matan.jpg",
-      "2018_1206_104545_008.jpg": "http://avladimir.beget.tech/2018_1206_104545_008.jpg",
-      "2018_1206_104620_010.jpg": "http://avladimir.beget.tech/2018_1206_104620_010.jpg",
-      "2018_1206_104733_014.jpg": "http://avladimir.beget.tech/2018_1206_104733_014.jpg",
-      "primat.jpg": "http://avladimir.beget.tech/primat.jpg",
-      "2018_1206_104832_018.jpg": "http://avladimir.beget.tech/2018_1206_104832_018.jpg",
-      "it.jpg": "http://avladimir.beget.tech/it.jpg",
-    }
+    };
+
     this.width = Dimensions.get('window').width;
     this.height = Dimensions.get('window').height;
 
@@ -318,14 +301,47 @@ class VirtScreen extends React.Component {
     this.raycaster = new THREE.Raycaster();
     this.mouseVector = new THREE.Vector3();
     this.nextPhoto = "2018_1204_140215_048.jpg";
-    this.getIntersects = ( x, y ) => {
-      x = ( x / this.width ) * 2 - 1;
-      y = - ( y / this.height ) * 2 + 1;
-      this.mouseVector.set( x, y, 0.5 );
-      this.raycaster.setFromCamera( this.mouseVector, this.camera );
-      return this.raycaster.intersectObject( this.group, true );
+    this.intersects;
+    this.getIntersects = ( event ) => {
+	    // var x = event.nativeEvent.currentPageX;
+	    // var y = event.nativeEvent.currentPageY;
+      // x = ( x / this.width ) * 2 - 1;
+      // y = - ( y / this.height) * 2 + 1;
+  	  let touch = this.castPoint(event.nativeEvent)
+      this.raycaster.setFromCamera(touch, this.camera);
+      return this.raycaster.intersectObject( this.group, true);
     }
     this.onObject = false;
+    
+  }
+  setFiles = async() => {
+    this.files = {  
+      "2018_1204_140215_048.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1204_140215_048.jpg'))}),
+      "2018_1206_104942_019.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104942_019.jpg'))}),                     
+      "2018_1206_103734_002.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_103734_002.jpg'))}), 
+      "2018_1206_103843_003.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_103843_003.jpg'))}),
+      "2018_1206_103929_005.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_103929_005.jpg'))}), 
+      "2018_1206_104013_007.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104013_007.jpg'))}),
+      "geometry.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/geometry.jpg'))}), 
+      "2018_1206_104209_003.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104209_003.jpg'))}),
+      "2018_1206_104332_004.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104332_004.jpg'))}),
+      "2018_1206_104420_006.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104420_006.jpg'))}),
+      "matan.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/matan.jpg'))}),
+      "2018_1206_104545_008.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104545_008.jpg'))}),
+      "2018_1206_104620_010.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104620_010.jpg'))}),
+      "2018_1206_104733_014.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104733_014.jpg'))}),
+      "primat.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/primat.jpg'))}),
+      "2018_1206_104832_018.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/2018_1206_104832_018.jpg'))}),
+      "it.jpg": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/it.jpg'))}),
+      "arrow": await ExpoTHREE.createTextureAsync({asset: Expo.Asset.fromModule(require('../../media/VT/arrow.png'))}),
+    }
+  }
+  castPoint = ({ locationX: x, locationY: y }) => {
+    let touch = new THREE.Vector2();
+    // touch.set( x, y);
+    touch.set(((x / this.width) * 2) - 1, - (y / this.height) * 2 + 1, 0.5);
+
+    return touch;
   }
   componentDidMount() {
     THREE.suppressExpoWarnings(); 
@@ -336,7 +352,7 @@ class VirtScreen extends React.Component {
   }
   render() {
     return (
-           <GLView
+        <GLView
         style={{ flex: 1, backgroundColor:"#fff" }}
         onContextCreate={this.onContextCreate} 
         onStartShouldSetResponder={()=>true}
@@ -349,11 +365,6 @@ class VirtScreen extends React.Component {
           this.savedLongitude = this.longitude;
           this.savedLatitude = this.latitude;		
 
-          var intersects = this.getIntersects( event.nativeEvent.pageX, event.nativeEvent.pageY );
-				  if ( intersects.length > 0 && intersects.length != 'undefined') {
-            this.onObject = true;
-				  } 
-          //Alert.alert((this.onObject)?"1":"0");
         }}
         onResponderMove={(event)=>{
           const {touchBank,numberActiveTouches} = event.touchHistory;
@@ -372,22 +383,23 @@ class VirtScreen extends React.Component {
           this.manualControl = true;
           }		         
         }}
-        onResponderRelease={(event)=>{
+        onResponderRelease = {async(event)=>{
+			
+			event.preventDefault();
           //const {touchBank} = event.touchHistory;
           //Alert.alert((this.onObject)?"1":"0");
           if(this.manualControl == false){
-            if(this.onObject == true){
               this.manualControl = false;
-              var intersects = this.getIntersects( event.nativeEvent.currentPageX, event.nativeEvent.currentPageY );
-              if ( intersects.length > 0 ) {  
-                this.nextPhoto = intersects[0].object.next;
-                this.showPanorama(this.nextPhoto);                
-                this.longitude = intersects[0].object.longitude;
+              this.intersects = this.getIntersects(event );	
+              if ( this.intersects.length > 0 && this.intersects.length != 'undefined') {  
+			  
+                this.nextPhoto = this.intersects[0].object.next;
+				await this.showPanorama(this.nextPhoto);     
+                this.longitude =  this.intersects[0].object.longitude;				
               }                    
-            }
+            
           }
           
-          this.onObject = false;          
           this.manualControl = false;
           this.prevDiff = undefined;
         }}         
@@ -395,9 +407,10 @@ class VirtScreen extends React.Component {
    
     );
   }
- 
+  
   onContextCreate = async gl => {
-
+    
+    await this.setFiles();
     this.cameraPoint = (longitude) => {
       this.camera.target.x = 500 * Math.cos(THREE.Math.degToRad(longitude));
       this.camera.target.y = 500 * Math.cos(THREE.Math.degToRad(90));
@@ -406,7 +419,6 @@ class VirtScreen extends React.Component {
     }
     const { drawingBufferWidth: width, drawingBufferHeight: height } = gl;
     const scale = PixelRatio.get();
-
     const scene = new THREE.Scene();
     this.scene = scene;
     const camera = new THREE.PerspectiveCamera(
@@ -425,13 +437,15 @@ class VirtScreen extends React.Component {
 
     this.showPanorama = async (nextPhoto) => {
       // creation of the sphere material
-      const texture = await ExpoTHREE.loadAsync(this.files[nextPhoto]);
-      var sphereMaterial = new THREE.MeshBasicMaterial( { map: texture } );    
+	  
+      //const texture = await ExpoTHREE.loadAsync(this.files[nextPhoto]);
+      var sphereMaterial = new THREE.MeshBasicMaterial( { map: this.files[nextPhoto]} );    
       // geometry + material = mesh (actual object)
       var sphereMesh = new THREE.Mesh(this.sphere, sphereMaterial);
       this.scene.add(sphereMesh);
-
       this.showArrows(nextPhoto);
+	  
+	  return 1;
     }
     this.showArrows = async (nextPhoto) => {
 
@@ -444,8 +458,7 @@ class VirtScreen extends React.Component {
       console.log(arrows)
       for(var i in arrows){
         if(this.info[nextPhoto]["points"][i].coords.length == 3){
-		  var spriteMap = await ExpoTHREE.loadAsync("http://avladimir.beget.tech/arrow.PNG");      
-          var sprite = new THREE.Sprite( new THREE.SpriteMaterial( { map: spriteMap} ) );
+          var sprite = new THREE.Sprite( new THREE.SpriteMaterial( { map: this.files["arrow"]} ) );
           sprite.position.set(...this.info[nextPhoto]["points"][i].coords);
           sprite.scale.set( 8, 8, 8 );
           sprite.next = this.info[nextPhoto]["points"][i].next;
@@ -457,12 +470,13 @@ class VirtScreen extends React.Component {
     this.render = () => {
       requestAnimationFrame(this.render);
       this.latitude = Math.max(-85, Math.min(85, this.latitude));
-      // if (this.onObject === false) this.cameraPoint(this.longitude);       
-      this.renderer.render(this.scene, this.camera);      
+      // if (this.onObject === false) this.cameraPoint(this.longitude);       	  
       this.cameraPoint(this.longitude);
+      this.renderer.render(this.scene, this.camera);      
       gl.endFrameEXP();
     };
-    this.showPanorama(this.nextPhoto);             
+	
+    await this.showPanorama(this.nextPhoto);             
     this.cameraPoint(this.longitude);
     this.render();
   }; 
