@@ -25,5 +25,8 @@
     "ios": {
       "supportsTablet": true
     },
+	"android":	{
+	  "package": "com.university.math3d"
+	}
   },	
 }
