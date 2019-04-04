@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ImageBackground, Text, View } from 'react-native';
+import { Image, ImageBackground, Text, View, Linking } from 'react-native';
 import { MainMenuButton } from '../components';
 import styles from '../style';
 
@@ -27,7 +27,7 @@ export class HomeScreen extends React.Component {
               />
               <MainMenuButton
                 title="Виртуальный тур"
-              onPress={() => this.props.navigation.navigate('Virt')}
+              onPress={() => {Linking.openURL('https://skycolor.space/wp/panoram/')}}
               />
               <MainMenuButton
                 title="О нас"
