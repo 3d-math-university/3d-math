@@ -88,8 +88,18 @@ export default StyleSheet.create({
     },
 
     StoryHeaderText:{
-        textAlign: 'center', // <-- the magic
+        textAlign: 'center',
         fontSize: 40,
+        fontWeight: 'bold',
+        color:'#fff',
+        textShadowColor: 'rgba(0, 0, 0, 0.75)',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowRadius: 10,
+    },
+
+    StoryHeaderTextSmall:{
+        textAlign: 'center',
+        fontSize: 24,
         fontWeight: 'bold',
         color:'#fff',
         textShadowColor: 'rgba(0, 0, 0, 0.75)',
@@ -104,7 +114,52 @@ export default StyleSheet.create({
 
     InfoPageImage:{
         width: '100%',
-        maxHeight: 100*PixelRatio.get(),
+        height: 75*PixelRatio.get(),
+        flex: 1,
+    },
+
+    InfoPageHeader: {
+        fontSize: 28,
+        textAlign: 'center',
+        color: '#121212',
+        padding: 7*PixelRatio.get(),
+    },
+
+    InfoCard: {
+        padding: 7*PixelRatio.get(),
+    },
+
+    InfoCardTop: {
+        flexDirection: 'row'
+    },
+
+    InfoCardImage: {
+        flex: 2,
+        overflow: 'hidden',
+        marginRight: 10,
+        maxHeight: 200
+    },
+
+    InfoCardText: {
+        flex: 2
+    },
+
+    InfoCardTextFull: {
+        width: '100%'
+    },
+
+    InfoCardBottom: {
+        marginTop: 10,
+        textAlign: 'center'
+    },
+
+    InfoCardPerson: {
+        marginTop: 5,
+        marginBottom: 5
+    },
+
+    InfoCardPersonBold: {
+        fontWeight: 'bold'
     },
 
     logo:{

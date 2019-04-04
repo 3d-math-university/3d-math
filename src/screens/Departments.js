@@ -15,7 +15,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud1.jpg')}
-                onPress={() => this.props.navigation.navigate('Departments')}
+                onPress={() => this.props.navigation.navigate('_AlgebraFuncAnalysis')}
                 title="Кафедра алгебры и функционального анализа"
             />
             <ImageButton
@@ -24,7 +24,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud2.jpg')}
-                onPress={() => this.props.navigation.navigate('Departments')}
+                onPress={() => this.props.navigation.navigate('_DifferentialEquations')}
                 title="Кафедра дифференциальных уравнений"
             />
             <ImageButton
@@ -33,7 +33,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud3.jpg')}
-                onPress={() => this.props.navigation.navigate('Departments')}
+                onPress={() => this.props.navigation.navigate('_ComputerScience')}
                 title="Кафедра информатики"
             />
             <ImageButton
@@ -42,7 +42,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud4.jpg')}
-                onPress={() => this.props.navigation.navigate('Departments')}
+                onPress={() => this.props.navigation.navigate('_MathAnalysis')}
                 title="Кафедра математического анализа"
             />
             <ImageButton
@@ -51,7 +51,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud1.jpg')}
-                onPress={() => this.props.navigation.navigate('Departments')}
+                onPress={() => this.props.navigation.navigate('_AppliedMath')}
                 title="Кафедра прикладной математики"
             />
             </View>

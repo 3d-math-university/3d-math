@@ -11,12 +11,12 @@ const RootStack = createStackNavigator({
     }),
   },
   Departments: {
-    screen: Screens.DepartmentsScreen, 
+    screen: Screens.DepartmentsScreen,
     navigationOptions: () => ({
       headerTransparent: false,
-      title: `Кафедры`,     
+      title: `Кафедры`,
     }),
-      
+
   },
   Enrolee: {
     screen: Screens.EnroleeScreen,
@@ -24,14 +24,29 @@ const RootStack = createStackNavigator({
   Virt: {
     screen: Screens.VirtScreen,
   },
-  AboutUs: {
-    screen: Screens.AboutUsScreen,  
+  _AlgebraFuncAnalysis: {
+    screen: Screens.AlgebraFuncAnalysisScreen,
+  },
+  _AppliedMath: {
+    screen: Screens.AppliedMathScreen,
+  },
+  _ComputerScience: {
+    screen: Screens.ComputerScienceScreen,
+  },
+  _DifferentialEquations: {
+    screen: Screens.DifferentialEquationsScreen,
+  },
+  _MathAnalysis: {
+    screen: Screens.MathAnalysisScreen,
+  },
+  _AboutUs: {
+    screen: Screens.AboutUsScreen,
     navigationOptions:()=>({
       headerTintColor: '#fff',
     }),
   },
 }, {
-    initialRouteName: 'Home',   
+    initialRouteName: 'Home',
     defaultNavigationOptions:{
       headerTransparent: true,
     }
