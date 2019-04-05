@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
-    "expo": "^32.0.0",
+    "create-react-native-app": "^2.0.2",
+    "expo": "^32.0.6",
+    "expo-cli": "^2.14.0",
     "expo-graphics": "^1.0.3",
     "expo-three": "^3.0.0-alpha.8",
     "react": "16.5.0",

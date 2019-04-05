@@ -1,9 +1,9 @@
 {
-  "packagerPort": 19001,
-  "packagerPid": 24001,
-  "expoServerNgrokUrl": "https://a8-bah.anonymous.3dmath.exp.direct",
-  "packagerNgrokUrl": "https://packager.a8-bah.anonymous.3dmath.exp.direct",
-  "ngrokPid": 24057,
+  "packagerPort": null,
+  "packagerPid": null,
   "devToolsPort": 19002,
-  "expoServerPort": 19000
+  "expoServerPort": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
