@@ -5,7 +5,7 @@ class VirtScreen extends Component {
   render() {
     return (
       <WebView
-        source={{uri: 'https://skycolor.space/wp/panoram'}}
+        source={{uri: 'http://avladimir.beget.tech/index.html'}}
       />
     );
   }
