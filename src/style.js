@@ -162,6 +162,21 @@ export default StyleSheet.create({
         fontWeight: 'bold'
     },
 
+    InfoListItem: {
+        width: '100%',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+
+    InfoListText: {
+        fontSize: 18,
+        color: '#121212',
+    },
+
+
     logo:{
         marginBottom: 10,
     },
