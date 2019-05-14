@@ -1,6 +1,6 @@
 export * from './AboutUs';
 export * from './Departments';
-export * from './Enrolee';
+export * from './ForEnrollee';
 export * from './Home';
 export * from './Virt';
 export * from './_AlgebraFuncAnalysis';

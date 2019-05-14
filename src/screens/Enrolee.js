@@ -27,9 +27,9 @@ export class EnroleeScreen extends React.Component {
       {
         title: 'Перечень документов',
         body: 'Для поступления на обучение по программам бакалавриата и (или) специалитета поступающие лично или через доверенное лицо подают заявление установленного образца о приеме с приложением необходимых документов и их копии:\n\n- копию документа, который удостоверяет личность и гражданство абитуриента;\n\n- документ государственного образца о среднем общем образовании и приложение к нему или документ государственного образца о среднем профессиональном образовании и приложение к нему или диплом о высшем образовании и приложение к нему, а также их копии;\n\n- четыре цветных фотографии размером 3х4 см;\n\nРезультаты ЕГЭ, необходимые для поступления\n\n- другие документы, если это вызвано особыми условиями зачисления:\n\n1. При представлении документа иностранного государства об образовании поступающий представляет свидетельство о признании иностранного образования, за исключением следующих случаев:\n\nПри представлении документа иностранного государства об образовании, которое соответствует части 3 статьи 107 Федерального закона № 273-ФЗ;\n\nПри поступлении в образовательную организацию высшего образования, которая вправе самостоятельно осуществлять в установленном ею порядке признание иностранного образования и (или) иностранной квалификации, которые не соответствуют условиям, предусмотренным частью 3 статьи 107 Федерального закона № 273-ФЗ;\n\nПри представлении документа об образовании, образец которого утвержден Кабинетом Министров Украины, если обладатель указанного документа является лицом, признанным гражданином, или лицом, постоянно проживавшим на территории Крыма.\n\n2. При необходимости создания специальных условий при проведении вступительных испытаний - заключение федерального учреждения медико-социальной экспертизы, подтверждающей особенности психофизического развития, индивидуальные возможности и состояние здоровья поступающего, которые являются основанием для создания специальных условий при проведения испытаний;\n\n3. Для детей-инвалидов, инвалидов I и II групп, инвалидов с детства, инвалидов вследствие военной травмы или заболевания, полученных в период прохождения военной службы - справка об инвалидности;\n\n4. Для использования особого права или преимущества победителями и призерами всероссийской олимпиады, - документ, подтверждающий, что поступающий является победителем или призером заключительного этапа всероссийской олимпиады школьников;\n\n5. Для использования особого права или преимущества победителями и призерами IV этапа всеукраинской ученической олимпиады (для лиц, признанных гражданами РФ) - документ, подтверждающий, что поступающий является победителем или призером IV этапа всеукраинской ученической олимпиады;\n\n6. Для использования особого права или преимущества членами сборных команд Российской Федерации - документ, подтверждающий, что поступающий был включен в число членов сборной команды;\n\n7. Для использования особого права или преимущества членами сборных команд Украины (для лиц, признанных гражданами РФ) - документ, подтверждающий, что поступающий был включен в число членов сборной команды;\n\n8. Для использования особого права или преимущества чемпионами (призерами) в области спорта - документ, подтверждающий статус указанного чемпиона или призера;\n\n9. Для использования права на прием в пределах особой квоты или для использования преимущественного права зачисления - документ, подтверждающий, что поступающий относится к числу соответствующих лиц, в том числе лиц из числа детей-сирот и детей, оставшихся без попечения родителей, до достижения ими возраста 23 лет;\n\n10. Для использования особого права или преимущества победителями и призерами олимпиад школьников - документ, подтверждающий, что поступающий является победителем или призером олимпиады школьников;\n\n11. документы, подтверждающие индивидуальные достижения поступающего, результаты которых учитываются при приеме на обучение в соответствии с правилами приема, утвержденными организацией самостоятельно (представляются по усмотрению поступающего);',
-        agreementFirst: 'first.dev',
-        agreementSecond: 'second.dev',
-        agreementThird: 'third.dev',
+        agreementFirst: 'https://priem.cfuv.ru/sites/default/files/documents/%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5.docx',
+        agreementSecond: 'https://priem.cfuv.ru/sites/default/files/documents/%D0%A1%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D1%83%20%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20.docx',
+        agreementThird: 'https://priem.cfuv.ru/sites/default/files/documents/%D0%A1%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D1%83%20%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%851.docx',
       },
       {
         title: 'Порядок учёта индивидуальных достижений',
@@ -75,144 +75,147 @@ export class EnroleeScreen extends React.Component {
           {
             this.state.contents
               ? this.state.contents.map((param, i) => {
-                return (
-                  <DropDownItem
-                    key={i}
-                    style={[ styles.dropDownItem, { marginTop: 10 }]}
-                    contentVisible={false}
-                    invisibleImage={IC_ARR_DOWN}
-                    visibleImage={IC_ARR_UP}
-                    header={
-                        <View style={styles.InfoListItem}>
-                            <Text style={styles.InfoListText}>{param.title}</Text>
-                        </View>
-                    }>
-                    <View>
-                        {param.headerLarge ?
-                            <Text style={{ fontSize: 18, fontWeight: 'bold'}}>{param.headerLarge}</Text> :
-                            null
-                        }
-                        {param.headerSmall ?
-                            <Text style={{ fontSize: 14, fontWeight: 'bold'}}>{param.headerSmall}</Text> :
-                            null
-                        }
-                        {param.agreementFirst ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.agreementFirst)}>Согласие на зачисление</Text> :
-                            null
-                        }
-                        {param.agreementSecond ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.agreementSecond)}>Согласие на обработку персональных данных (для совершеннолетних)</Text> :
-                            null
-                        }
-                        {param.agreementThird ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.agreementThird)}>Согласие на обработку персональных данных (для несовершеннолетних)</Text> :
-                            null
-                        }
+                  return(
 
-                        {param.linkFirst ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.linkFirst)}>Постановление правительства РФ от 27.11.2013 № 1076 О порядке заключения и расторжения договора о целевом приеме и договора о целевом обучении" (вместе с "Правилами заключения и расторжения договора о целевом приеме и договора о целевом обучении")</Text> :
-                            null
-                        }
-
-                        {param.linkSecond ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.linkSecond)}>Договор о целевом обучении бланк</Text> :
-                            null
-                        }
-
-                        {param.linkThird ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.linkThird)}>Договор о целевом обучении</Text> :
-                            null
-                        }
-
-                        {param.linkFourth ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.linkFourth)}>Официальный бланк заказчика целевого приема</Text> :
-                            null
-                        }
-
-                        {param.body ?
-                            <Text style={{fontSize: 14}}>{param.body}</Text> :
-                            null}
-                        {param.headerFirst ?
-                            <Text style={{fontSize: 18, fontWeight: 'bold'}}>{param.headerFirst}</Text> :
-                        null}
-                        {param.headerFirstSmall ?
-                            <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerSmall}</Text> :
-                        null}
-                        {param.headerSecond ?
-                            <Text style={{fontSize: 14, fontWeight: 'bold'}}>{param.headerSecond}</Text> :
-                        null}
-                        {param.bodySecond ?
-                            <Text style={{fontSize: 12}}>{param.bodySecond}</Text> :
-                        null}
-                        {param.headerThird ?
-                            <Text style={{fontSize: 14, fontWeight: 'bold'}}>{param.headerThird}</Text> :
-                        null}
-                        {param.headerThirdCaptionFirst ?
-                            <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerThirdCaptionFirst}</Text> :
-                        null}
-                        {param.headerThirdListFirst ?
-                            <Text style={{fontSize: 12}}>{param.headerThirdListFirst}</Text> :
-                        null}
-                        {param.headerThirdCaptionSecond ?
-                            <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerThirdCaptionSecond}</Text> :
-                        null}
-                        {param.headerThirdListSecond ?
-                            <Text style={{fontSize: 12}}>{param.headerThirdListSecond}</Text> :
-                        null}
-                        {param.headerThirdCaptionThird ?
-                            <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerThirdCaptionThird}</Text> :
-                        null}
-                        {param.headerThirdListThird ?
-                            <Text style={{fontSize: 12}}>{param.headerThirdListThird}</Text> :
-                        null}
-                        {param.link ?
-                            <Text style={{
-                                color: 'blue',
-                                textDecorationLine: "underline",
-                                textDecorationStyle: "solid",
-                                textDecorationColor: "blue"
-                            }} onPress = {() => Linking.openURL(param.link)}>За более подробной информацией перейдите по ссылке.</Text> :
-                            null
-                        }
-
-                    </View>
-                  </DropDownItem>
-                );
+                  )
+                  // return (
+                //   <DropDownItem
+                //     key={i}
+                //     style={[ styles.dropDownItem, { marginTop: 10 }]}
+                //     contentVisible={false}
+                //     invisibleImage={IC_ARR_DOWN}
+                //     visibleImage={IC_ARR_UP}
+                //     header={
+                //         <View style={styles.InfoListItem}>
+                //             <Text style={styles.InfoListText}>{param.title}</Text>
+                //         </View>
+                //     }>
+                //     <View>
+                //         {param.headerLarge ?
+                //             <Text style={{ fontSize: 18, fontWeight: 'bold'}}>{param.headerLarge}</Text> :
+                //             null
+                //         }
+                //         {param.headerSmall ?
+                //             <Text style={{ fontSize: 14, fontWeight: 'bold'}}>{param.headerSmall}</Text> :
+                //             null
+                //         }
+                //         {param.agreementFirst ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.agreementFirst)}>Согласие на зачисление</Text> :
+                //             null
+                //         }
+                //         {param.agreementSecond ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.agreementSecond)}>Согласие на обработку персональных данных (для совершеннолетних)</Text> :
+                //             null
+                //         }
+                //         {param.agreementThird ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.agreementThird)}>Согласие на обработку персональных данных (для несовершеннолетних)</Text> :
+                //             null
+                //         }
+                //
+                //         {param.linkFirst ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.linkFirst)}>Постановление правительства РФ от 27.11.2013 № 1076 О порядке заключения и расторжения договора о целевом приеме и договора о целевом обучении" (вместе с "Правилами заключения и расторжения договора о целевом приеме и договора о целевом обучении")</Text> :
+                //             null
+                //         }
+                //
+                //         {param.linkSecond ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.linkSecond)}>Договор о целевом обучении бланк</Text> :
+                //             null
+                //         }
+                //
+                //         {param.linkThird ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.linkThird)}>Договор о целевом обучении</Text> :
+                //             null
+                //         }
+                //
+                //         {param.linkFourth ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.linkFourth)}>Официальный бланк заказчика целевого приема</Text> :
+                //             null
+                //         }
+                //
+                //         {param.body ?
+                //             <Text style={{fontSize: 14}}>{param.body}</Text> :
+                //             null}
+                //         {param.headerFirst ?
+                //             <Text style={{fontSize: 18, fontWeight: 'bold'}}>{param.headerFirst}</Text> :
+                //         null}
+                //         {param.headerFirstSmall ?
+                //             <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerSmall}</Text> :
+                //         null}
+                //         {param.headerSecond ?
+                //             <Text style={{fontSize: 14, fontWeight: 'bold'}}>{param.headerSecond}</Text> :
+                //         null}
+                //         {param.bodySecond ?
+                //             <Text style={{fontSize: 12}}>{param.bodySecond}</Text> :
+                //         null}
+                //         {param.headerThird ?
+                //             <Text style={{fontSize: 14, fontWeight: 'bold'}}>{param.headerThird}</Text> :
+                //         null}
+                //         {param.headerThirdCaptionFirst ?
+                //             <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerThirdCaptionFirst}</Text> :
+                //         null}
+                //         {param.headerThirdListFirst ?
+                //             <Text style={{fontSize: 12}}>{param.headerThirdListFirst}</Text> :
+                //         null}
+                //         {param.headerThirdCaptionSecond ?
+                //             <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerThirdCaptionSecond}</Text> :
+                //         null}
+                //         {param.headerThirdListSecond ?
+                //             <Text style={{fontSize: 12}}>{param.headerThirdListSecond}</Text> :
+                //         null}
+                //         {param.headerThirdCaptionThird ?
+                //             <Text style={{fontSize: 10, fontWeight: 'bold'}}>{param.headerThirdCaptionThird}</Text> :
+                //         null}
+                //         {param.headerThirdListThird ?
+                //             <Text style={{fontSize: 12}}>{param.headerThirdListThird}</Text> :
+                //         null}
+                //         {param.link ?
+                //             <Text style={{
+                //                 color: 'blue',
+                //                 textDecorationLine: "underline",
+                //                 textDecorationStyle: "solid",
+                //                 textDecorationColor: "blue"
+                //             }} onPress = {() => Linking.openURL(param.link)}>За более подробной информацией перейдите по ссылке.</Text> :
+                //             null
+                //         }
+                //
+                //     </View>
+                //   </DropDownItem>
+                // );
               })
               : null
           }

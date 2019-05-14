@@ -23,7 +23,7 @@ export class HomeScreen extends React.Component {
               />
               <MainMenuButton
                 title="Абитуриенту"
-                onPress={() => this.props.navigation.navigate('Enrolee')}
+                onPress={() => this.props.navigation.navigate('ForEnrollee')}
               />
               <MainMenuButton
                 title="Виртуальный тур"
@@ -35,6 +35,7 @@ export class HomeScreen extends React.Component {
               />
             </View>
           </View>
+
           <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
         </ImageBackground>
       );

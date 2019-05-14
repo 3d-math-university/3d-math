@@ -43,6 +43,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         flexGrow: 0,
+        backgroundColor: '#eee',
     },
 
     departmentsButton: {
@@ -193,4 +194,73 @@ export default StyleSheet.create({
         textAlign: 'center',
         margin: 10
     },
+
+    forEnrolleeScreenStyle: {
+        width: '100%',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignContent: 'center',
+        backgroundColor: '#eee'
+    },
+
+    menuButtonWrapper: {
+        width: '33%',
+        height: 140,
+        padding: 13,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        backgroundColor: '#eee',
+        borderWidth: 1,
+        borderColor: '#ddd',
+    },
+
+    menuButtonText: {
+        width: '100%',
+        height: 40,
+        textAlign: 'center',
+        fontSize: 12,
+        color: '#666',
+        marginTop: 10
+    },
+
+    menuButtonIcon: {
+        width: 35,
+        height: 35
+    },
+
+    tabBarWrapper: {
+        width: '100%',
+        height: 75,
+        backgroundColor: '#fafafa',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignContent: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: '#eee'
+    },
+
+    tabButtonWrapper: {
+        width: '25%',
+        height: 75,
+        padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#eee',
+        borderWidth: 1,
+        borderColor: '#ddd',
+    },
+
+    tabButtonImage: {
+        width: 25,
+        height: 25
+    },
+
+    tabButtonText: {
+        fontSize: 10,
+        marginTop: 5,
+        width: '100%',
+        textAlign: 'center'
+    }
 });

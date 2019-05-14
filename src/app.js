@@ -1,5 +1,5 @@
 import React from 'react';
-import { createAppContainer, createStackNavigator, } from 'react-navigation'; // Version can be specified in package.json
+import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 import * as Screens from './screens/index';
 
 
@@ -16,10 +16,9 @@ const RootStack = createStackNavigator({
       headerTransparent: false,
       title: `Кафедры`,
     }),
-
   },
-  Enrolee: {
-    screen: Screens.EnroleeScreen,
+  ForEnrollee: {
+    screen: Screens.ForEnrolleeScreen,
     navigationOptions: () => ({
         headerTransparent: false,
         title: `Абитуриенту`,
@@ -73,6 +72,5 @@ const RootStack = createStackNavigator({
       headerTransparent: true,
     }
 });
-
 
 export default createAppContainer(RootStack);

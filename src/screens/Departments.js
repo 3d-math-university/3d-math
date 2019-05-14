@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView, ImageBackground, Text } from 'react-native';
-import { ImageButton} from '../components';
+import { ImageButton } from '../components';
 import styles from '../style';
 
 export class DepartmentsScreen extends React.Component {
