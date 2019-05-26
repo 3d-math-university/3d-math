@@ -23,8 +23,11 @@ export class AppliedMath extends React.Component {
     promises: Promises,
     achievements: Achievements
   });
+  updateState = (i) => {
+    this.setState({ index: i });
+  }
   renderTabBar = props => {
-    return <TabBar {...props} />;
+    return <TabBar {...props} updateScreen={this.updateState.bind(this)} />;
   };
   render() {
     return (

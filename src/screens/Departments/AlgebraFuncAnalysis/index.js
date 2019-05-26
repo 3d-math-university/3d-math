@@ -11,7 +11,7 @@ export class AlgebraFuncAnalysis extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: "history", title: "История" },
+      { key: "history", title: "История1" },
       { key: "subjects", title: "Дисциплины" },
       { key: "promises", title: "Перспективы" },
       { key: "achievements", title: "Достижения" }
@@ -23,8 +23,11 @@ export class AlgebraFuncAnalysis extends React.Component {
     promises: Promises,
     achievements: Achievements
   });
+  updateState = (i) => {
+    this.setState({ index: i });
+  }
   renderTabBar = props => {
-    return <TabBar {...props} />;
+    return <TabBar {...props} updateScreen={this.updateState.bind(this)} />;
   };
   render() {
     return (

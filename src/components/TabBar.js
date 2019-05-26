@@ -14,7 +14,14 @@ export class TabBar extends React.Component {
           else if (route.key == "promises") icon = icons.tree;
           else if (route.key == "achievements") icon = icons.star;
 
-          return <TabButton route={route} i={i} icon={icon} />;
+          return (
+            <TabButton
+              route={route}
+              i={i}
+              icon={icon}
+              updateScreen={this.props.updateScreen.bind(this)}
+            />
+          );
         })}
       </View>
     );

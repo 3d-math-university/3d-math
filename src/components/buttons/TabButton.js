@@ -3,12 +3,12 @@ import { TouchableOpacity, ImageBackground } from "react-native";
 import styles from "../../style";
 import Animated from "react-native-reanimated";
 
-export class TabButton extends React.Component{
+export class TabButton extends React.Component {
   render() {
     return (
       <TouchableOpacity
         style={styles.tabButtonWrapper}
-        onPress={() => this.setState({ index: this.props.i })}
+        onPress={() => this.props.updateScreen(this.props.i)}
       >
         <ImageBackground
           source={this.props.icon}
