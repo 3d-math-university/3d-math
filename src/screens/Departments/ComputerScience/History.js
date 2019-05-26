@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { ImageBackground,Image, Text, View, ScrollView, Dimensions } from 'react-native';
-import styles from '../style';
-import {TabBar} from "../components/TabBar";
-export class ComputerScienceScreen extends React.Component {
+import styles from '../../../style';
+
+export class History extends Component {
     render() {
       return (
           <View style={{ flex:1 }}>
               <ScrollView style={styles.InfoPageView}>
 
-                  <ImageBackground source={require ('../../media/img/ComputerScience/header.jpg')} style={styles.StoryHeaderImage}>
+                  <ImageBackground source={require ('../../../../media/img/ComputerScience/header.jpg')} style={styles.StoryHeaderImage}>
                       <Text style={styles.StoryHeaderTextSmall}>Кафедра прикладной математики и информатики</Text>
                   </ImageBackground>
 
@@ -28,7 +28,7 @@ export class ComputerScienceScreen extends React.Component {
                       <View style={styles.InfoCard}>
                           <View style={styles.InfoCardTop}>
                               <View style={styles.InfoCardImage}>
-                                  <Image source={require ('../../media/img/ComputerScience/donskoy.jpg')}/>
+                                  <Image source={require ('../../../../media/img/ComputerScience/donskoy.jpg')}/>
                               </View>
                               <View style={styles.InfoCardText}>
                                   <Text style={styles.InfoCardPersonBold}>Донской Владимир Иосифович</Text>
@@ -43,7 +43,7 @@ export class ComputerScienceScreen extends React.Component {
                       </View>
 
                       <View style={styles.InfoPageImage}>
-                          <Image source={require ('../../media/img/ComputerScience/img1.jpg')} style={{height:'100%', width:'100%'}}/>
+                          <Image source={require ('../../../../media/img/ComputerScience/img1.jpg')} style={{height:'100%', width:'100%'}}/>
                       </View>
 
                       <View style={styles.InfoCard}>
@@ -60,11 +60,8 @@ export class ComputerScienceScreen extends React.Component {
                           <Text style={styles.InfoCardPerson}><Text style={styles.InfoCardPersonBold}>Белозуб Владимир Антонович</Text> - ассистент кафедры информатики.</Text>
                       </View>
                   </View>
-
-              </ScrollView>
-
-              <TabBar />
-              <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
+                  <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
+              </ScrollView>           
           </View>
       );
     }

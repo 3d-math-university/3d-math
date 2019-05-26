@@ -1,13 +1,13 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { ImageBackground,Image, Text, View, ScrollView, Dimensions } from 'react-native';
-import styles from '../style';
-import {TabBar} from "../components/TabBar";
-export class AppliedMathScreen extends React.Component {
+import styles from '../../../style';
+
+export class History extends Component {
     render() {
       return (
           <View style={{flex: 1}}>
-              <ScrollView style={styles.InfoPageView}>
-                  <ImageBackground source={require ('../../media/img/AppliedMath/header.png')} style={styles.StoryHeaderImage}>
+              <ScrollView style={styles.InfoPageView}>  
+                  <ImageBackground source={require ('../../../../media/img/AppliedMath/header.png')} style={styles.StoryHeaderImage}>
                       <Text style={styles.StoryHeaderTextSmall}>Кафедра прикладной математики</Text>
                   </ImageBackground>
 
@@ -26,7 +26,7 @@ export class AppliedMathScreen extends React.Component {
                       <View style={styles.InfoCard}>
                           <View style={styles.InfoCardTop}>
                               <View style={styles.InfoCardImage}>
-                                  <Image source={require ('../../media/img/AppliedMath/chekhov.jpg')}/>
+                                  <Image source={require ('../../../../media/img/AppliedMath/chekhov.jpg')}/>
                               </View>
                               <View style={styles.InfoCardText}>
                                   <Text style={styles.InfoCardPersonBold}>Чехов Валерий Николаевич</Text>
@@ -43,7 +43,7 @@ export class AppliedMathScreen extends React.Component {
                       </View>
 
                       <View style={styles.InfoPageImage}>
-                          <Image source={require ('../../media/img/AppliedMath/img1.jpg')} style={{height:'100%', width:'100%'}}/>
+                          <Image source={require ('../../../../media/img/AppliedMath/img1.jpg')} style={{height:'100%', width:'100%'}}/>
                       </View>
 
                       <View style={styles.InfoCard}>
@@ -56,11 +56,8 @@ export class AppliedMathScreen extends React.Component {
                           <Text style={styles.InfoCardPerson}><Text style={styles.InfoCardPersonBold}>Макарьин Валентин Иванович</Text> - старший преподаватель.</Text>
                       </View>
                   </View>
-
-              </ScrollView>
-
-              <TabBar />
-              <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
+                  <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
+              </ScrollView>             
           </View>
       );
     }

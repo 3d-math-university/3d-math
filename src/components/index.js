@@ -2,3 +2,4 @@
 
 export * from './buttons/MainMenuButton';
 export * from './buttons/ImageButton';
+export * from './icons'

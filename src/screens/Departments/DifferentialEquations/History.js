@@ -1,13 +1,13 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { ImageBackground,Image, Text, View, ScrollView, Dimensions } from 'react-native';
-import styles from '../style';
-import {TabBar} from "../components/TabBar";
-export class DifferentialEquationsScreen extends React.Component {
+import styles from '../../../style';
+
+export class History extends Component {
     render() {
       return (
           <View style={{flex:1}}>
               <ScrollView style={styles.InfoPageView}>
-                  <ImageBackground source={require ('../../media/img/DifferentialEquations/header.png')} style={styles.StoryHeaderImage}>
+                  <ImageBackground source={require ('../../../../media/img/DifferentialEquations/header.png')} style={styles.StoryHeaderImage}>
                       <Text style={styles.StoryHeaderTextSmall}>Кафедра дифференциальных уравнений</Text>
                   </ImageBackground>
 
@@ -25,7 +25,7 @@ export class DifferentialEquationsScreen extends React.Component {
                       <View style={styles.InfoCard}>
                           <View style={styles.InfoCardTop}>
                               <View style={styles.InfoCardImage}>
-                                  <Image source={require ('../../media/img/DifferentialEquations/anashkin.jpg')}/>
+                                  <Image source={require ('../../../../media/img/DifferentialEquations/anashkin.jpg')}/>
                               </View>
                               <View style={styles.InfoCardText}>
                                   <Text style={styles.InfoCardPersonBold}>Анашкин Олег Васильевич</Text>
@@ -41,7 +41,7 @@ export class DifferentialEquationsScreen extends React.Component {
                       </View>
 
                       <View style={styles.InfoPageImage}>
-                          <Image source={require ('../../media/img/DifferentialEquations/img1.png')} style={{height:'100%', width:'100%'}}/>
+                          <Image source={require ('../../../../media/img/DifferentialEquations/img1.png')} style={{height:'100%', width:'100%'}}/>
                       </View>
 
                       <View style={styles.InfoCard}>
@@ -57,11 +57,10 @@ export class DifferentialEquationsScreen extends React.Component {
                           <Text style={styles.InfoCardPerson}><Text style={styles.InfoCardPersonBold}>Корнута Анжелика Александровна</Text> - старший преподаватель</Text>
                       </View>
                   </View>
-
+                  <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
               </ScrollView>
 
-              <TabBar />
-              <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
+           
           </View>
       );
     }

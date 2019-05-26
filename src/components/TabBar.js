@@ -1,23 +1,22 @@
-import React, { Component } from 'react';
-import {View } from "react-native";
-import {TabButton} from "./buttons/TabButton";
-import styles from '../style';
+import React from "react";
+import { View } from "react-native";
+import { TabButton } from "./buttons/TabButton";
+import styles from "../style";
+import icons from "../components/icons";
+export class TabBar extends React.Component {
+  render() {
+    return (
+      <View style={styles.tabBarWrapper}>
+        {this.props.navigationState.routes.map((route, i) => {
+          var icon = icons.default;
+          if (route.key == "history") icon = icons.art;
+          else if (route.key == "subjects") icon = icons.book;
+          else if (route.key == "promises") icon = icons.tree;
+          else if (route.key == "achievements") icon = icons.star;
 
-export class TabBar extends Component{
-    const changeScreen = () => {
-      alert('triggered');
-    };
-
-    render() {
-        const {tabBarWrapper} = styles;
-
-        return(
-            <View style={tabBarWrapper}>
-                <TabButton source={require('../../media/icons/tabbar/art.png')}  header="История" onPress={this.changeScreen}/>
-                <TabButton source={require('../../media/icons/tabbar/book.png')} header="Дисциплины" onPress={this.changeScreen}/>
-                <TabButton source={require('../../media/icons/tabbar/tree.png')} header="Перспективы" onPress={this.changeScreen}/>
-                <TabButton source={require('../../media/icons/tabbar/star.png')} header="Достижения" onPress={this.changeScreen}/>
-            </View>
-        )
-    }
+          return <TabButton route={route} i={i} icon={icon} />;
+        })}
+      </View>
+    );
+  }
 }

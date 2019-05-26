@@ -1,20 +1,23 @@
-import React from 'react';
-import { Text, TouchableOpacity, ImageBackground } from 'react-native';
-import styles from '../../style';
+import React from "react";
+import { TouchableOpacity, ImageBackground } from "react-native";
+import styles from "../../style";
+import Animated from "react-native-reanimated";
 
-const TabButton = ({
-    source,
-    header,
-    onPress
-}) => {
-    const {tabButtonWrapper, tabButtonImage, tabButtonText} = styles;
-
+export class TabButton extends React.Component{
+  render() {
     return (
-        <TouchableOpacity style={tabButtonWrapper} onPress={onPress}>
-            <ImageBackground source={source} style={tabButtonImage}></ImageBackground>
-            <Text style={tabButtonText}>{header}</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.tabButtonWrapper}
+        onPress={() => this.setState({ index: this.props.i })}
+      >
+        <ImageBackground
+          source={this.props.icon}
+          style={styles.tabButtonImage}
+        />
+        <Animated.Text style={styles.tabButtonText}>
+          {this.props.route.title}
+        </Animated.Text>
+      </TouchableOpacity>
     );
-};
-
-export { TabButton };
+  }
+}

@@ -242,8 +242,9 @@ export default StyleSheet.create({
     },
 
     tabButtonWrapper: {
-        width: '25%',
-        height: 75,
+        flex:1,
+        // width: '25%',
+        // height: 75,
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',

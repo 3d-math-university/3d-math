@@ -15,7 +15,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud1.jpg')}
-                onPress={() => this.props.navigation.navigate('_AlgebraFuncAnalysis')}
+                onPress={() => this.props.navigation.navigate('AlgebraFuncAnalysis')}
                 title="Кафедра алгебры и функционального анализа"
             />
             <ImageButton
@@ -24,7 +24,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud2.jpg')}
-                onPress={() => this.props.navigation.navigate('_DifferentialEquations')}
+                onPress={() => this.props.navigation.navigate('DifferentialEquations')}
                 title="Кафедра дифференциальных уравнений"
             />
             <ImageButton
@@ -33,7 +33,7 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud3.jpg')}
-                onPress={() => this.props.navigation.navigate('_ComputerScience')}
+                onPress={() => this.props.navigation.navigate('ComputerScience')}
                 title="Кафедра информатики"
             />
             <ImageButton
@@ -42,23 +42,21 @@ export class DepartmentsScreen extends React.Component {
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud4.jpg')}
-                onPress={() => this.props.navigation.navigate('_MathAnalysis')}
+                onPress={() => this.props.navigation.navigate('MathAnalysis')}
                 title="Кафедра математического анализа"
             />
-            <ImageButton
+            <ImageButton    
                 style={styles.departmentsButton}
                 titleStyle={styles.departmentsButtonTitle}
                 width={'100%'}
                 height={'100%'}
                 source={require('../../media/img/aud1.jpg')}
-                onPress={() => this.props.navigation.navigate('_AppliedMath')}
+                onPress={() => this.props.navigation.navigate('AppliedMath')}
                 title="Кафедра прикладной математики"
             />
             </View>
-
             <Text style={styles.footerText}>CFU Labs &copy; 2019</Text>
         </ScrollView>
-
       </ImageBackground>
      );
     }
