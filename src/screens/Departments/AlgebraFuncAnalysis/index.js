@@ -11,7 +11,7 @@ export class AlgebraFuncAnalysis extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: "history", title: "История1" },
+      { key: "history", title: "История" },
       { key: "subjects", title: "Дисциплины" },
       { key: "promises", title: "Перспективы" },
       { key: "achievements", title: "Достижения" }
